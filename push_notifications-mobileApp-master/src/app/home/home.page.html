@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Push Notifications - Capacitor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Push Notifications</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <section>
+      <div slot="fixed">
+        <h3>Register device and generate token</h3>
+      </div>
+      <ion-button (click)="generateToken()" color="primary">Generate token</ion-button>
+    </section>
+    <section>
+      <div slot="fixed">
+        <h3>Subscriptions by topic</h3>
+      </div>
+      <ion-item>
+        <ion-input type="text" #topicValue placeholder="Write here your topic"></ion-input>
+        <ion-button (click)="generateTopicToNotifications(topicValue)" color="primary">Subscribe topic</ion-button>
+      </ion-item>    
+    </section>
+  </div>
+
+</ion-content>
